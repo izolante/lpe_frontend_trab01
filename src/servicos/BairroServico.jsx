@@ -2,7 +2,7 @@ import { getToken } from "../seguranca/Autenticacao";
 
 export const getBairroServico = async () => {
     const response =
-        await fetch(`http://localhost:3002/bairro`,
+        await fetch(`${process.env.REACT_APP_ENDERECO_API}/bairro`,
             {
                 method: "GET",
                 headers: {
@@ -16,7 +16,7 @@ export const getBairroServico = async () => {
 
 export const getBairroServicoPorCodigoAPI = async codigo => {
     const response =
-        await fetch(`http://localhost:3002/bairro/${codigo}`,
+        await fetch(`${process.env.REACT_APP_ENDERECO_API}/bairro/${codigo}`,
             {
                 method: "GET",
                 headers: {
@@ -30,7 +30,7 @@ export const getBairroServicoPorCodigoAPI = async codigo => {
 
 export const deleteBairroServico = async codigo => {
     const response =
-        await fetch(`http://localhost:3002/bairro/${codigo}`,
+        await fetch(`${process.env.REACT_APP_ENDERECO_API}/bairro/${codigo}`,
             {
                 method: "DELETE",
                 headers: {
@@ -44,7 +44,7 @@ export const deleteBairroServico = async codigo => {
 
 
 export const cadastraBairroServico = async (objeto, metodo) => {
-    const response = await fetch(`http://localhost:3002/bairro`, {
+    const response = await fetch(`${process.env.REACT_APP_ENDERECO_API}/bairro`, {
         method: metodo,
         headers: {
             "Content-Type": "application/json",
