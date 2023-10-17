@@ -29,11 +29,11 @@ function Acontecimento() {
         setAlerta({ status: "", message: "" });
         setObjeto({
             codigo: "",
-            descricao: "ttt",
-            endereco: "ttt",
-            numero_rua: "12",
+            descricao: "",
+            endereco: "",
+            numero_rua: "",
             data_acontecido: new Date().toISOString().slice(0, 10),
-            bairro: "1"
+            bairro: ""
         });
     }
 
