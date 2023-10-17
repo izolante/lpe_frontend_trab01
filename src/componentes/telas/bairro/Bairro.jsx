@@ -24,7 +24,7 @@ function Bairro() {
     const novoObjeto = () => {
         setEditar(false);
         setAlerta({ status: "", message: "" });
-        setObjeto({ codigo: 0, nome: "" });
+        setObjeto({ codigo: "", nome: "" });
     }
 
     const editarObjeto = async codigo => {
