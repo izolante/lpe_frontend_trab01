@@ -2,7 +2,7 @@ import { getToken } from "../seguranca/Autenticacao";
 
 export const getAcontecimentoServico = async () => {
     const response = 
-    await fetch(`http://localhost:3002/acontecimento`,
+    await fetch(`${process.env.REACT_APP_ENDERECO_API}/acontecimento`,
     {
         method : "GET",
         headers : {
@@ -16,7 +16,7 @@ export const getAcontecimentoServico = async () => {
 
 export const getAcontecimentoServicoPorCodigoAPI = async codigo => {
     const response = 
-    await fetch(`http://localhost:3002/acontecimento/${codigo}`,
+    await fetch(`${process.env.REACT_APP_ENDERECO_API}/acontecimento/${codigo}`,
     {
         method : "GET",
         headers : {
@@ -30,7 +30,7 @@ export const getAcontecimentoServicoPorCodigoAPI = async codigo => {
 
 export const deleteAcontecimentoServico = async codigo => {
     const response = 
-    await fetch(`http://localhost:3002/acontecimento/${codigo}`,
+    await fetch(`${process.env.REACT_APP_ENDERECO_API}/acontecimento/${codigo}`,
     {
         method : "DELETE",
         headers : {
@@ -44,7 +44,7 @@ export const deleteAcontecimentoServico = async codigo => {
 
 
 export const cadastraAcontecimentoServico = async (objeto, metodo) => {
-    const response = await fetch(`http://localhost:3002/acontecimento`, {
+    const response = await fetch(`${process.env.REACT_APP_ENDERECO_API}/acontecimento`, {
         method: metodo,
         headers: { "Content-Type": "application/json",
         "authorization" : getToken() },
