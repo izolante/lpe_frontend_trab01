@@ -15,7 +15,7 @@ function Form() {
             <CampoEntrada id="txtCodigo" label="Código" tipo="number"
                 name="codigo" value={objeto.codigo}
                 handlechange={handleChange}
-                requerido={false} readonly={true}
+                requerido={false} readonly={false}
                 maximocaracteres={5} />
             <CampoEntrada id="txtNome" label="Nome" tipo="text"
                 name="nome" value={objeto.nome}
