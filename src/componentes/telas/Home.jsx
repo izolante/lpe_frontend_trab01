@@ -1,6 +1,6 @@
 const Home = () => (
     <div>
-        <h1>eShop - LPE</h1>
+        <h1>Mapa Criminal</h1>
     </div>
 )
 
