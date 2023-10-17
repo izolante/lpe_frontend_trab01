@@ -21,7 +21,7 @@ function Login() {
                 senha: senha
             };
             setCarregando(true);
-            await fetch(`http://localhost:3002/login`, {
+            await fetch(`${process.env.REACT_APP_ENDERECO_API}/login`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)
